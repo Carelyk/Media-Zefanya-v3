@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Kebun Bunga Indra: kertas krem + tinta cokelat lembut */
+    --background: 40 45% 96%;
+    --foreground: 24 20% 31%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 20% 31%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 20% 31%;
+
+    --primary: 95 28% 42%;
+    --primary-foreground: 40 45% 97%;
+
+    --secondary: 200 42% 88%;
+    --secondary-foreground: 24 20% 31%;
+
+    --muted: 40 30% 90%;
+    --muted-foreground: 22 14% 48%;
+
+    --accent: 24 55% 52%;
+    --accent-foreground: 40 45% 97%;
+
+    --destructive: 5 48% 55%;
+    --destructive-foreground: 40 45% 97%;
+
+    --border: 40 25% 86%;
+    --input: 40 25% 82%;
+    --ring: 95 28% 42%;
+
+    --radius: 1.1rem;
+
+    --warning: 40 65% 50%;
+    --warning-foreground: 24 20% 31%;
+
+    --success: 95 28% 42%;
+    --success-foreground: 40 45% 97%;
+
+    /* enam indra: pastel taman */
+    --sense-warna: 40 82% 82%;   /* kuning mentega   #F6D8A8 */
+    --sense-tekstur: 255 42% 89%; /* lavender        #DDD3F2 */
+    --sense-rasa: 105 42% 82%;   /* hijau daun       #C9E5C0 */
+    --sense-aroma: 5 68% 89%;    /* pink lembut      #F7CFCF */
+    --sense-bunyi: 205 55% 86%;  /* biru langit      #C6DFF0 */
+    --sense-manfaat: 45 75% 83%; /* kuning telur     #F4E3B0 */
+
+    --bee: 48 96% 55%;
+    --leaf: 105 30% 62%;
+
+    --font-heading: 'Baloo 2', 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  /* kartu taman */
+  .garden-card {
+    background: hsl(var(--card));
+    border: 1.5px solid hsl(var(--border));
+    border-radius: 1.6rem;
+    box-shadow: 0 10px 28px -14px hsl(var(--foreground) / 0.18);
+  }
+
+  /* kartu stempel "bagus" */
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: hsl(var(--primary));
+    border: 2.5px solid hsl(var(--primary));
+    border-radius: 999px;
+    padding: 0.15rem 0.85rem;
+    transform: rotate(-6deg);
+    background: hsl(var(--primary) / 0.06);
+  }
+
+  /* warna per indra */
+  .sense-warna   { background: hsl(var(--sense-warna)); }
+  .sense-tekstur { background: hsl(var(--sense-tekstur)); }
+  .sense-rasa    { background: hsl(var(--sense-rasa)); }
+  .sense-aroma   { background: hsl(var(--sense-aroma)); }
+  .sense-bunyi   { background: hsl(var(--sense-bunyi)); }
+  .sense-manfaat { background: hsl(var(--sense-manfaat)); }
+
+  .border-sense-warna   { border-color: hsl(var(--sense-warna)); }
+  .border-sense-tekstur { border-color: hsl(var(--sense-tekstur)); }
+  .border-sense-rasa    { border-color: hsl(var(--sense-rasa)); }
+  .border-sense-aroma   { border-color: hsl(var(--sense-aroma)); }
+  .border-sense-bunyi   { border-color: hsl(var(--sense-bunyi)); }
+  .border-sense-manfaat { border-color: hsl(var(--sense-manfaat)); }
+
+  /* kelopak bunga mekar */
+  .petal {
+    transform: scale(0);
+    transform-origin: 150px 150px;
+    transform-box: view-box;
+    transition: transform 0.9s cubic-bezier(0.22, 1.4, 0.36, 1);
+  }
+  .petal.open {
+    transform: scale(1);
+  }
+
+  /* melayang lembut */
+  .sway {
+    animation: sway 5s ease-in-out infinite;
+  }
+  @keyframes sway {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-6px) rotate(1deg); }
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 10px 28px -14px hsl(var(--foreground) / 0.18);
+  }
+  .shadow-blobby {
+    box-shadow: 0 4px 0 hsl(var(--border)), 0 12px 24px -10px hsl(var(--foreground) / 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
