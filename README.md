@@ -1,24 +1,35 @@
-# Sistem Manajemen Media-Zefanya v3 (Taman)
+# 🌳 Media-Zefanya v3 (Taman)
 
-Aplikasi web untuk manajemen data fasilitas taman dan vegetasi/tanaman yang terhubung langsung ke Supabase.
+> *Hore! Selamat datang di aplikasi taman bunga paling asri dan hijau! 🌸🌿 Dibuat khusus buat nyatet aneka tanaman, bunga cantik, dan fasilitas taman kota biar tetap terawat dan wangi!*
 
-## Fitur Utama
+---
 
-- **Manajemen Taman & Tanaman** - Tambah, edit, hapus, dan lihat data area taman serta koleksi tanaman di dalamnya.
-- **Pencarian & Status** - Filter kondisi tanaman dan pencarian nama taman secara instan.
-- **Mode Guru** - Verifikasi keamanan khusus administrator menggunakan password (`zefanya123`).
-- **Sinkronisasi Supabase** - Seluruh data tersimpan terpusat di proyek Supabase `dytcoemthbngxoamoetr` tabel `taman`.
+## 🌟 Fitur-Fitur Seru di Dalamnya
 
-## Tech Stack
+- 🌻 **Pendataan Tanaman & Taman** - Catat nama tanaman, lokasi taman, dan kondisi kesuburannya dengan mudah dan gampang!
+- 🔍 **Pencarian Kilat** - Mau nyari bunga mawar atau pohon melati? Ketik aja namanya, langsung ketemu!
+- 🔐 **Mode Guru (Secret Password)** - Halaman admin dilindungi sandi rahasia (`zefanya123`) biar datanya nggak sembarangan diubah orang lain.
+- ☁️ **Nyambung ke Supabase** - Semua data tanaman tersimpan aman di awan Supabase (`dytcoemthbngxoamoetr`) pada tabel `taman`.
 
-- Frontend: HTML, CSS, JavaScript / Frontend Framework
-- Backend / Database: Supabase PostgreSQL (`dytcoemthbngxoamoetr`)
-- Deployment Lokal: PM2 Process Manager (Port 8082)
+---
 
-## Perbandingan Versi Media-Zefanya (v1, v2, v3)
+## 🛠️ Tech Stack & Alat Perang
 
-| Versi | Nama Proyek / Topik | Tabel Supabase | Port PM2 | Repository GitHub | Deskripsi Singkat |
+- **Frontend:** HTML, CSS, JavaScript / Modern Framework
+- **Backend / Database:** Supabase PostgreSQL (`dytcoemthbngxoamoetr`)
+- **Server Lokal:** PM2 Process Manager (Jalan terus 24 jam di port `8082`)
+
+---
+
+## 📊 Perbandingan Versi Media-Zefanya (v1, v2, v3)
+
+Biar nggak bingung bedanya apa aja, yuk intip tabel perbandingan gaul di bawah ini:
+
+| Versi | Topik Aplikasi | Tabel Supabase | Port PM2 | Repository GitHub | Penjelasan Singkat |
 |---|---|---|---|---|---|
-| **v1** | Skripsi | `skripsi` | 8080 | `Carelyk/Media-Zefanya` | Manajemen data skripsi & nilai mahasiswa |
-| **v2** | Buku | `buku` | 8081 | `Carelyk/Media-Zefanya-v2` | Manajemen inventaris perpustakaan dan buku |
-| **v3** | Taman | `taman` | 8082 | `Carelyk/Media-Zefanya-v3` | Manajemen data fasilitas taman kota & tanaman |
+| **v1** 🎓 | Skripsi | `skripsi` | `8080` | `Carelyk/Media-Zefanya` | Buat ngurusin judul skripsi dan nilai mahasiswa |
+| **v2** 📚 | Buku | `buku` | `8081` | `Carelyk/Media-Zefanya-v2` | Buat inventaris perpustakaan dan data buku bacaan |
+| **v3** 🌳 | Taman | `taman` | `8082` | `Carelyk/Media-Zefanya-v3` | Buat pendataan tanaman dan fasilitas taman kota |
+
+---
+*Dibuat dengan penuh semangat dan secangkir kopi ☕ oleh Tim Pengembang.*
